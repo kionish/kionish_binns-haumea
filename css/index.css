@@ -1,3 +1,5 @@
+/* This website offers a Desktop first browsing experience */
+
 body {
     background-color:papayawhip;
     color:green;
@@ -101,3 +103,25 @@ ul {
   justify-content: space-evenly;
 }
 
+/* I want to add media queries that will modify the user experience if the 
+user's screen is smaller than a desktop, ie, a tablet or mobile phone:
+1. H1 heading - color and font style
+2. H2 headings - color and background color
+3. Unordered Lists - text color and background
+*/
+
+/* Styles for screens smaller than 1300 pixels wide */
+@media screen and (max-width: 1000px) {
+  h1 {
+    color:cornflowerblue;
+    font-style: normal;
+  }
+  h2 {
+    color:green;
+    background-color:black;
+  }
+  ul {
+    color:cornflowerblue;
+    background-color: grey;
+  }
+}
