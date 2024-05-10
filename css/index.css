@@ -103,6 +103,22 @@ ul {
   justify-content: space-evenly;
 }
 
+/* message form */
+.message-form {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.edit-message-form {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+}
+button {
+  background-color: green;
+  color: white;
+}
+
 /* I want to add media queries that will modify the user experience if the 
 user's screen is smaller than a desktop, ie, a tablet or mobile phone:
 1. H1 heading - color and font style

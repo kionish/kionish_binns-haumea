@@ -152,6 +152,36 @@
             <li><a href=https://www.linkedin.com/in/kionish-binns/ class="image-link"><img src="linkedin.png" alt="" style="width: 60px;"></a></li>
 
         </ul> -->
+        <!-- Creating a form for visitors to leave a message.....format is like a message board that are shown on the page, not a private message -->
+        </section>
+        <section id="Messages-Form">
+            <h2>Leave a Message</h2>
+            <form name="leave_message" class="message-form">
+                <label for="usersName"> Name: </label>
+                <input
+                type="text"
+                id="usersName"
+                required="true"
+                /><br />
+                <label for="usersEmail"> Email: </label>
+                <input
+                type="email"
+                id="usersEmail"
+                required="true"
+                /><br />
+                <label for="usersMessage"> Message: </label>
+                <textarea
+                name="usersMessage"
+                id="usersMessage"
+                required="true"
+                ></textarea>
+                <br />
+                <button type="submit" value="submit" name="submit" class="submit-button">Submit</button>
+            </form>
+        </section>
+        <section id="messages-received">
+            <h2>Messages</h2>
+            <ul id="messages"></ul>
         </section>
 
     <script src="./js/index.js"></script>
