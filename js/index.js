@@ -96,10 +96,7 @@ function makeRemoveButton () {
         let entry = removeButton.parentNode;
         let uid1 = entry.getAttribute('id');
         delete entryById[uid1];
-        entry.parentNode.removeChild(entry); // Corrected line
-        // if (messageList.childElementCount === 0) {
-        //     messageSection.hidden = true;
-        // };
+        entry.parentNode.removeChild(entry); 
     });
     return removeButton;
 };
@@ -111,10 +108,10 @@ function makeEditButton() {
     editButton.addEventListener('click', () => {
         let entry = editButton.parentNode;
 
-        let oldEditButton = entry.querySelector('button.edit-button');
-        oldEditButton.hidden = true;
-        let oldRemoveButton = entry.querySelector('button.remove-button');
-        oldRemoveButton.hidden = true;
+        // let oldEditButton = entry.querySelector('button.edit-button');
+        // oldEditButton.hidden = true;
+        // let oldRemoveButton = entry.querySelector('button.remove-button');
+        // oldRemoveButton.hidden = true;
 
         let uid = entry.getAttribute('id');
         let clonedForm = messageForm.cloneNode(true);
@@ -143,3 +140,39 @@ function makeEditButton() {
     });
     return editButton;
 };
+
+
+const userName = 'kionish';
+
+// fetch repositories and present JSON data
+fetch(`https://api.github.com/users/${userName}/repos`)
+  .then(response => {
+    if (!response.ok) {
+      return new Error("Failed to gather repositories");
+    }
+    return response.json();
+  })
+  .then((repositories) => {
+    console.log(repositories);
+
+//Selecting the Projects section using DOM
+const projectSection = document.getElementById("Projects");
+
+//Making a ul in projects section
+let projectList = document.createElement("ul");
+projectSection.appendChild(projectList);
+
+for (let i = 0; i < repositories.length; i++) {
+
+  let project = document.createElement("li");
+  project.innerText = repositories[i].name;
+  projectList.appendChild(project);
+}
+  });
+  
+  
+
+  
+
+
+
