@@ -1,92 +1,99 @@
 /* This website offers a Desktop first browsing experience */
 
 body {
-    background-color:papayawhip;
-    color:green;
-    font-family: "Luxurious Roman", serif;
-    font-weight: 400;
-    font-style: normal;
+  background-color: papayawhip;
+  color: green;
+  font-family: "Luxurious Roman", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-
 #About {
-text-align: left;
-background-color:lightcyan ;
-padding: 5%;
+  text-align: left;
+  background-color: lightcyan;
+  padding: 5%;
 }
 
 #Experience ul li {
-padding: 8px;
-display: inline-flex;
-flex-wrap: wrap;
+  padding: 8px;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
+
 #Experience a {
-color:green;
+  color: green;
 }
 
 #Connect ul li {
-padding: 8px;
-display:inline-flex;
-}
-#Connect a {
-    color: green;
+  padding: 8px;
+  display: inline-flex;
 }
 
-h1 { 
-    font-style:oblique;
-    text-align: center;
-    font-size: 64px;
-    font-weight:bolder;
+#Connect a {
+  color: green;
+}
+
+h1 {
+  font-style: oblique;
+  text-align: center;
+  font-size: 78px;
+  font-weight: bolder;
 }
 
 h2 {
-    color:cornflowerblue;
-    font-size: 32px;
-    font-weight: bold;
+  color: cornflowerblue;
+  font-size: 32px;
+  font-weight: bold;
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  img {
-      float: right;
-  }
-  #navBar li {
-    display: inline;
-    padding: 0;
-    margin:0
-    
-    
-  }
-
-  #navBar a {
-    color:cornflowerblue;
-    text-align: center;
-    text-decoration: none;
-    padding-left: 8px;
-    padding-right: 8px;
-
-  }
-
-  #navBar {
-    background-color: green;
-    position: sticky;
-    overflow: hidden;
-    top: 0;
-    padding-bottom: 10px;
-  
-  }
-  #navBar li a:hover {
-    background-color: papayawhip;
-    color: green;
-    font-weight: bolder;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* .experience {
-  display:flex;
-  flex-wrap: wrap;
-} */
+img {
+  float: right;
+  border-radius: 25%;
+}
+
+img:hover {
+  transition: transform 1.2s ease-in-out;
+  transform: scale(1.5);
+}
+
+#navBar li {
+  display: inline;
+  padding: 0;
+  margin: 0
+}
+
+#navBar a {
+  color: cornflowerblue;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 24px;
+
+}
+
+#navBar {
+  background-color: green;
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  padding-bottom: 10px;
+
+}
+
+#navBar li a:hover {
+  background-color: papayawhip;
+  color: green;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
 
 .experience-container {
   display: flex;
@@ -99,7 +106,7 @@ ul {
 }
 
 .connect-container {
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
 }
 
@@ -109,11 +116,13 @@ ul {
   flex-direction: row;
   gap: 8px;
 }
+
 .edit-message-form {
   display: flex;
   flex-direction: row-reverse;
   gap: 8px;
 }
+
 button {
   background-color: green;
   color: white;
@@ -129,15 +138,22 @@ user's screen is smaller than a desktop, ie, a tablet or mobile phone:
 /* Styles for screens smaller than 1300 pixels wide */
 @media screen and (max-width: 1000px) {
   h1 {
-    color:cornflowerblue;
+    color: cornflowerblue;
     font-style: normal;
   }
+
   h2 {
-    color:green;
-    background-color:black;
+    color: green;
+    background-color: black;
   }
+
   ul {
-    color:cornflowerblue;
+    color: red;
     background-color: grey;
+    font-size: x-large;
+    display: grid;
   }
-}
+
+  #navBar a {
+    color: red;
+  }
